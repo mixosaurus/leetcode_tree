@@ -1,5 +1,6 @@
 #include "solution.h"
 #include <iostream>
+#include <algorithm>
 
 //将当前节点和其孩子节点,共三个节点作为研究主体
 //在这三个节点中找出第二小节点即可解决问题

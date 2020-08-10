@@ -1,7 +1,7 @@
 #include "solution.h"
 #include <iostream>
 
-//将当前节点和其孩子节点共三个节点作为研究主体
+//将当前节点和其孩子节点,共三个节点作为研究主体
 //在这三个节点中找出第二小节点即可解决问题
 //若当前节点值与其左孩子相等且与右孩子不相等，则当前节点的右孩子为第二小节点，另一种情况同理
 int Solution::findSecondMinimumValue(TreeNode* root) {

@@ -3,6 +3,7 @@
 #include <vector>
 #include <algorithm>
 #include <stack>
+#include <queue>
 using namespace std;
 
 //根据层次遍历序列和中序遍历序列生成二叉树
@@ -83,6 +84,30 @@ void traversePreorderNonRecursion(TreeNode* root) {
 			stack.push(p->left);
 		}
 	}
+	cout << endl;
+}
+
+//层次遍历
+void traverseLevel(TreeNode* root) {
+	if (root == nullptr) {
+		cout << "二叉树为空" << endl;
+		return;
+	}
+	queue<TreeNode*> queue;
+	TreeNode* p = nullptr;
+	queue.push(root);
+	while (!queue.empty()) {
+		p = queue.front();
+		queue.pop();
+		cout << p->val << " ";
+		if (p->left != nullptr) {
+			queue.push(p->left);
+		}
+		if (p->right != nullptr) {
+			queue.push(p->right);
+		}
+	}
+	cout << endl;
 }
 
 //手动建立二叉树，用于节点值允许重复的情况
